@@ -24,7 +24,7 @@ app.post('/smsResponse', (req, res) => {
   // twiml.message('The Robots are coming! Head for the hills!');
 
   if (req.body.Body == 'Hello') {
-    twiml.message('Hi there, welcome to Fashionassita! Some responses you may want to know are \'Buy\', \'Pass\', \'Love\', and \'Hate\'');
+    twiml.message('Hi there, welcome to Magento-Storefront! Some responses you may want to know are \'Buy\', \'Pass\', \'Love\', and \'Hate\'');
   } else if(req.body.Body == 'bye') {
     twiml.message('Goodbye');
   } else if (req.body.Body == 'Buy') {
