@@ -1,10 +1,12 @@
-
-
 const http = require('http');
 const express = require('express');
-const MessagingResponse = require('twilio').twiml.MessagingResponse;
-
 const app = express();
+
+var apikeys = require('./apikeys.js');
+const accountSid = apikeys.accountSid
+const authToken = apikeys.authToken;
+const client = require('twilio')(accountSid, authToken);
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 app.post('/smsPurchase', (req, res) => {
 
